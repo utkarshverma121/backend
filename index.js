@@ -1,6 +1,7 @@
 const express = require('express');
 
 const UserRouter = require('./routers/userRouter')
+const FeedRouter = require('./routers/feedRouter')
 
 // initialize express
 const app = express();
@@ -12,6 +13,7 @@ const port = 5000;
 app.use(express.json());
 
 app.use('/user', UserRouter);
+app.use('/feed', FeedRouter);
 
 
 //route or endpoint 
